@@ -10,8 +10,8 @@ st.title("📊 Medicaid Cost Forecasting & ER Spike Dashboard")
 # Load datasets
 @st.cache_data
 def load_data():
-    pmpm = pd.read_csv("pmpm.csv")
-    er = pd.read_csv("avoidable_er_trend.csv")
+    pmpm = pd.read_csv("PowerBI/pmpm.csv")
+    er = pd.read_csv("PowerBI/avoidable_er_trend.csv")
     pmpm["member_month"] = pd.to_datetime(pmpm["member_month"])
     er["member_month"] = pd.to_datetime(er["member_month"])
     return pmpm, er
